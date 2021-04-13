@@ -37,6 +37,18 @@ public class MyBinarySearchTree<E extends Comparable<E>> implements BinarySearch
 
     @Override
     public boolean search(E searchElement) {
+    	implementation.Node<E> temp = (implementation.Node<E>)root; 
+    	while( temp != null ) {
+    		if( searchElement.compareTo( temp.getData() ) == 0 ) {
+    			return true;
+    		}
+    		else if( searchElement.compareTo( temp.getData() ) < 0  ) {
+    			temp = temp.getLeft();
+    		}
+    		else {
+    			temp = temp.getRight();
+    		}
+    	}
         return false;
     }
 
