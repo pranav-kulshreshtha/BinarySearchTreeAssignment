@@ -5,10 +5,10 @@ import myinterface.Node;
 
 public class MyBinarySearchTree<E extends Comparable<E>> implements BinarySearchTreeADT<E> {
     //complete this class
+	
 
     @Override
     public void insert(E data) {
-
     }
 
     @Override
